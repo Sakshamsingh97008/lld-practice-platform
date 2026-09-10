@@ -1,0 +1,66 @@
+[
+  {
+    "id": "parking-lot",
+    "title": "Design a Parking Lot",
+    "difficulty": "Medium",
+    "duration": "30–40 min",
+    "tags": ["Strategy", "Composition", "OOP"],
+    "summary": "Design a multi-level parking lot that supports different vehicle types and pricing.",
+    "requirements": [
+      "The parking lot can have multiple floors.",
+      "Different spot sizes can accept different vehicle types.",
+      "A vehicle can be parked and unparked.",
+      "The system should issue a ticket and calculate parking fees.",
+      "The design should allow pricing rules to change without rewriting ParkingLot."
+    ],
+    "evaluationFocus": ["responsibilities", "spot allocation", "pricing strategy", "extensibility"]
+  },
+  {
+    "id": "vending-machine",
+    "title": "Design a Vending Machine",
+    "difficulty": "Easy",
+    "duration": "25–35 min",
+    "tags": ["State", "Strategy", "OOP"],
+    "summary": "Design a vending machine that handles product selection, payment, inventory and change.",
+    "requirements": [
+      "Products have price and inventory.",
+      "A customer can select a product and insert money.",
+      "The machine should reject invalid selections and insufficient payment.",
+      "The machine returns change and handles cancellation.",
+      "The design should make state transitions explicit."
+    ],
+    "evaluationFocus": ["state", "inventory", "payment", "failure handling"]
+  },
+  {
+    "id": "elevator",
+    "title": "Design an Elevator System",
+    "difficulty": "Medium",
+    "duration": "30–40 min",
+    "tags": ["Strategy", "State", "Scheduling"],
+    "summary": "Design a system that dispatches elevators to floor requests.",
+    "requirements": [
+      "There are multiple elevators.",
+      "Users can request an elevator from a floor.",
+      "The controller chooses an elevator based on a dispatch policy.",
+      "Elevators move between floors and have a direction/state.",
+      "The dispatch policy should be replaceable."
+    ],
+    "evaluationFocus": ["controller responsibility", "dispatch strategy", "state", "extensibility"]
+  },
+  {
+    "id": "rate-limiter",
+    "title": "Design a Rate Limiter",
+    "difficulty": "Hard",
+    "duration": "35–45 min",
+    "tags": ["Strategy", "Interface", "Concurrency"],
+    "summary": "Design a rate limiter that supports multiple algorithms and per-client limits.",
+    "requirements": [
+      "Clients can be limited independently.",
+      "The system should expose an allow/deny decision.",
+      "Different algorithms such as token bucket or fixed window may be supported.",
+      "The algorithm should be replaceable without changing callers.",
+      "The design should discuss concurrency and clock assumptions."
+    ],
+    "evaluationFocus": ["strategy", "state ownership", "concurrency", "testability"]
+  }
+]

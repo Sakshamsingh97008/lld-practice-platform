@@ -1,0 +1,264 @@
+[
+  {
+    "id": "f871a44d-6a47-47c7-9795-b69076cfeab2",
+    "problemId": "rate-limiter",
+    "submission": {
+      "assumptions": " i support multiple floors ,four vehicle types ,one active ticket per vehicle",
+      "classes": "parking lot coordinates floors , floor owns spots ,pricing strategy calculates fees",
+      "relationships": "parking lot composes floor object and depends on a spot allocation strategy",
+      "tradeoffs": "strategy is used for pricing because new pricing rules should not change parking lot",
+      "edgeCases": "full lot ,invalid vehicle ,duplicate exit ,payment failure"
+    },
+    "status": "COMPLETED",
+    "evaluation": {
+      "evaluator": "rule-based",
+      "score": 48,
+      "summary": "The core idea is present, but the design needs more explicit responsibilities, relationships, and change reasoning.",
+      "criteria": [
+        {
+          "key": "requirements",
+          "name": "Requirement understanding",
+          "weight": 15,
+          "score": 4,
+          "evidence": "i support multiple floors ,four vehicle types ,one active ticket per vehicle",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "State explicit scope boundaries and assumptions before introducing classes.",
+          "confidence": "medium"
+        },
+        {
+          "key": "responsibilities",
+          "name": "Class responsibilities",
+          "weight": 20,
+          "score": 4,
+          "evidence": "parking lot coordinates floors , floor owns spots ,pricing strategy calculates fees",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "For each major class, state one primary responsibility and avoid god objects.",
+          "confidence": "medium"
+        },
+        {
+          "key": "coupling",
+          "name": "Coupling & cohesion",
+          "weight": 15,
+          "score": 5.4,
+          "evidence": "parking lot composes floor object and depends on a spot allocation strategy",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Prefer composition and dependency injection where a collaborator may vary.",
+          "confidence": "medium"
+        },
+        {
+          "key": "encapsulation",
+          "name": "Encapsulation & interfaces",
+          "weight": 10,
+          "score": 4,
+          "evidence": "parking lot coordinates floors , floor owns spots ,pricing strategy calculates fees",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Expose behaviour through small interfaces rather than leaking mutable state.",
+          "confidence": "medium"
+        },
+        {
+          "key": "abstraction",
+          "name": "Abstraction / pattern fit",
+          "weight": 10,
+          "score": 5.4,
+          "evidence": "parking lot coordinates floors , floor owns spots ,pricing strategy calculates fees",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Use patterns only where they remove a real change point; avoid pattern-for-pattern's-sake.",
+          "confidence": "medium"
+        },
+        {
+          "key": "extensibility",
+          "name": "Extensibility",
+          "weight": 15,
+          "score": 4,
+          "evidence": "strategy is used for pricing because new pricing rules should not change parking lot",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Describe the next likely feature and show which class changes versus which stays stable.",
+          "confidence": "medium"
+        },
+        {
+          "key": "edgeCases",
+          "name": "Edge cases & testability",
+          "weight": 10,
+          "score": 8.2,
+          "evidence": "full lot ,invalid vehicle ,duplicate exit ,payment failure",
+          "concern": "No major gap detected by the deterministic review.",
+          "suggestion": "Cover invalid input, capacity/failure conditions, and duplicate or repeated operations.",
+          "confidence": "medium"
+        },
+        {
+          "key": "explanation",
+          "name": "Explanation & trade-offs",
+          "weight": 5,
+          "score": 4,
+          "evidence": "strategy is used for pricing because new pricing rules should not change parking lot",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Name at least one alternative and explain why the chosen design is preferable.",
+          "confidence": "medium"
+        }
+      ],
+      "nextSteps": [
+        "Explain one concrete requirement change and what code would need to change.",
+        "Identify one class that could become a dependency bottleneck and reduce that coupling.",
+        "Add one failure/edge case and describe the expected behaviour."
+      ],
+      "problemId": "rate-limiter"
+    },
+    "createdAt": "2026-09-10T14:08:09.217Z",
+    "updatedAt": "2026-09-10T14:08:09.239Z"
+  },
+  {
+    "id": "c75399be-ac11-4215-b34e-51ecfb086429",
+    "problemId": "rate-limiter",
+    "submission": {
+      "assumptions": " i support multiple floors ,four vehicle types ,one active ticket per vehicle",
+      "classes": "parking lot coordinates floors , floor owns spots ,pricing strategy calculates fees",
+      "relationships": "parking lot composes floor object and depends on a spot allocation strategy",
+      "tradeoffs": "strategy is used for pricing because new pricing rules should not change parking lot",
+      "edgeCases": "full lot ,invalid vehicle ,duplicate exit ,payment failure"
+    },
+    "status": "SUBMITTED",
+    "evaluation": null,
+    "createdAt": "2026-09-10T14:09:19.297Z",
+    "updatedAt": "2026-09-10T14:09:19.297Z",
+    "previousAttemptId": "f871a44d-6a47-47c7-9795-b69076cfeab2"
+  },
+  {
+    "id": "3dd2c195-2967-4af7-9a96-ae974c6fc315",
+    "problemId": "rate-limiter",
+    "submission": {
+      "assumptions": " i support multiple floors ,four vehicle types ,one active ticket per vehicle",
+      "classes": "parking lot coordinates floors , floor owns spots ,pricing strategy calculates fees",
+      "relationships": "parking lot composes floor object and depends on a spot allocation strategy",
+      "tradeoffs": "strategy is used for pricing because new pricing rules should not change parking lot",
+      "edgeCases": "full lot ,invalid vehicle ,duplicate exit ,payment failure"
+    },
+    "status": "SUBMITTED",
+    "evaluation": null,
+    "createdAt": "2026-09-10T14:13:31.115Z",
+    "updatedAt": "2026-09-10T14:13:31.115Z",
+    "previousAttemptId": "f871a44d-6a47-47c7-9795-b69076cfeab2"
+  },
+  {
+    "id": "bb89182c-bd90-45d9-bf93-44e5cd189000",
+    "problemId": "rate-limiter",
+    "submission": {
+      "assumptions": " i support multiple floors ,four vehicle types ,one active ticket per vehicle",
+      "classes": "parking lot coordinates floors , floor owns spots ,pricing strategy calculates fees",
+      "relationships": "parking lot composes floor object and depends on a spot allocation strategy",
+      "tradeoffs": "strategy is used for pricing because new pricing rules should not change parking lot",
+      "edgeCases": "full lot ,invalid vehicle ,duplicate exit ,payment failure"
+    },
+    "status": "SUBMITTED",
+    "evaluation": null,
+    "createdAt": "2026-09-10T14:19:33.693Z",
+    "updatedAt": "2026-09-10T14:19:33.693Z",
+    "previousAttemptId": "f871a44d-6a47-47c7-9795-b69076cfeab2"
+  },
+  {
+    "id": "e78f2178-71d4-4a76-926f-8dcf2e54d9ec",
+    "problemId": "rate-limiter",
+    "submission": {
+      "assumptions": "I support multiple floors, four vehicle types: Bike, Car, Truck and EV, and one active ticket per vehicle. Each floor contains different spot types with compatible vehicle rules. A vehicle can be parked only if a compatible spot is available. Pricing is based on parking duration and vehicle type. Payment processing is outside the MVP scope. A ticket is generated when a vehicle enters and becomes closed when the vehicle exits.",
+      "classes": "ParkingLot coordinates parking and exit operations but does not directly decide spot allocation or pricing. Floor owns its ParkingSpot objects and provides available compatible spots. ParkingSpot owns its occupancy state and accepts only compatible vehicles. Vehicle contains vehicle identity and type. Ticket represents one parking session with entry and exit time. SpotAllocationStrategy decides which available spot should be selected. PricingStrategy calculates the parking fee. PaymentService handles payment processing. This keeps changing responsibilities separated and avoids making ParkingLot a God Object.",
+      "relationships": "ParkingLot composes multiple Floor objects. Each Floor composes multiple ParkingSpot objects. ParkingLot depends on SpotAllocationStrategy to find a suitable spot and PricingStrategy to calculate the fee. When a vehicle enters, ParkingLot asks the allocation strategy for a compatible spot, marks the spot occupied, and creates a Ticket. During exit, ParkingLot retrieves the ticket, asks PricingStrategy for the fee, processes payment, releases the spot, and closes the ticket. Strategies are injected into ParkingLot so implementations can be replaced independently.",
+      "tradeoffs": "I considered putting spot allocation and pricing directly inside ParkingLot, which would be simpler initially but would make the class grow whenever a new allocation or pricing rule is introduced. I chose Strategy because these behaviours are likely to change independently. For example, a nearest-spot strategy can later be replaced by a lowest-floor strategy without changing ParkingLot. Similarly, adding weekend pricing requires a new PricingStrategy rather than modifying the core parking flow. A new vehicle type should mainly require updating compatibility rules instead of changing ParkingLot logic.",
+      "edgeCases": "The system handles a full parking lot, no compatible spot, invalid vehicle type, duplicate parking attempts, duplicate exit attempts, invalid or expired tickets, payment failure, and attempting to release an already-free spot. Strategy interfaces can be mocked during unit tests. I would test that a vehicle receives a compatible spot, that occupied spots cannot be allocated again, that pricing is calculated correctly, and that a failed payment does not close the ticket or release the spot."
+    },
+    "status": "COMPLETED",
+    "evaluation": {
+      "evaluator": "rule-based",
+      "score": 58,
+      "summary": "The core idea is present, but the design needs more explicit responsibilities, relationships, and change reasoning.",
+      "criteria": [
+        {
+          "key": "requirements",
+          "name": "Requirement understanding",
+          "weight": 15,
+          "score": 5.4,
+          "evidence": "I support multiple floors, four vehicle types: Bike, Car, Truck and EV, and one active ticket per vehicle. Each floor contains different spot types with compatible vehicle rules. A vehicle can be parked only if a compati",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "State explicit scope boundaries and assumptions before introducing classes.",
+          "confidence": "medium"
+        },
+        {
+          "key": "responsibilities",
+          "name": "Class responsibilities",
+          "weight": 20,
+          "score": 5.4,
+          "evidence": "ParkingLot coordinates parking and exit operations but does not directly decide spot allocation or pricing. Floor owns its ParkingSpot objects and provides available compatible spots. ParkingSpot owns its occupancy state",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "For each major class, state one primary responsibility and avoid god objects.",
+          "confidence": "medium"
+        },
+        {
+          "key": "coupling",
+          "name": "Coupling & cohesion",
+          "weight": 15,
+          "score": 5.4,
+          "evidence": "ParkingLot composes multiple Floor objects. Each Floor composes multiple ParkingSpot objects. ParkingLot depends on SpotAllocationStrategy to find a suitable spot and PricingStrategy to calculate the fee. When a vehicle ",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Prefer composition and dependency injection where a collaborator may vary.",
+          "confidence": "medium"
+        },
+        {
+          "key": "encapsulation",
+          "name": "Encapsulation & interfaces",
+          "weight": 10,
+          "score": 5.4,
+          "evidence": "ParkingLot coordinates parking and exit operations but does not directly decide spot allocation or pricing. Floor owns its ParkingSpot objects and provides available compatible spots. ParkingSpot owns its occupancy state",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Expose behaviour through small interfaces rather than leaking mutable state.",
+          "confidence": "medium"
+        },
+        {
+          "key": "abstraction",
+          "name": "Abstraction / pattern fit",
+          "weight": 10,
+          "score": 6.8,
+          "evidence": "ParkingLot coordinates parking and exit operations but does not directly decide spot allocation or pricing. Floor owns its ParkingSpot objects and provides available compatible spots. ParkingSpot owns its occupancy state",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Use patterns only where they remove a real change point; avoid pattern-for-pattern's-sake.",
+          "confidence": "medium"
+        },
+        {
+          "key": "extensibility",
+          "name": "Extensibility",
+          "weight": 15,
+          "score": 5.4,
+          "evidence": "I considered putting spot allocation and pricing directly inside ParkingLot, which would be simpler initially but would make the class grow whenever a new allocation or pricing rule is introduced. I chose Strategy becaus",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Describe the next likely feature and show which class changes versus which stays stable.",
+          "confidence": "medium"
+        },
+        {
+          "key": "edgeCases",
+          "name": "Edge cases & testability",
+          "weight": 10,
+          "score": 8.2,
+          "evidence": "The system handles a full parking lot, no compatible spot, invalid vehicle type, duplicate parking attempts, duplicate exit attempts, invalid or expired tickets, payment failure, and attempting to release an already-free",
+          "concern": "No major gap detected by the deterministic review.",
+          "suggestion": "Cover invalid input, capacity/failure conditions, and duplicate or repeated operations.",
+          "confidence": "medium"
+        },
+        {
+          "key": "explanation",
+          "name": "Explanation & trade-offs",
+          "weight": 5,
+          "score": 4,
+          "evidence": "I considered putting spot allocation and pricing directly inside ParkingLot, which would be simpler initially but would make the class grow whenever a new allocation or pricing rule is introduced. I chose Strategy becaus",
+          "concern": "Add concrete evidence and explain how the design behaves under change.",
+          "suggestion": "Name at least one alternative and explain why the chosen design is preferable.",
+          "confidence": "medium"
+        }
+      ],
+      "nextSteps": [
+        "Explain one concrete requirement change and what code would need to change.",
+        "Identify one class that could become a dependency bottleneck and reduce that coupling.",
+        "Add one failure/edge case and describe the expected behaviour."
+      ],
+      "problemId": "rate-limiter"
+    },
+    "createdAt": "2026-09-10T14:20:36.129Z",
+    "updatedAt": "2026-09-10T14:20:36.384Z"
+  }
+]
